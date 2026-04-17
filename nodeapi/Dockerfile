@@ -3,7 +3,7 @@
 FROM node:14 AS nodeapi-build
 # set working directory inside of the container
 WORKDIR /usr/src/app
-# copy everything from present dir to nodeapi dir
+# copy everything from working dir to nodeapi dir
 COPY ./ ./nodeapi/
 # cd into nodeapi dir and run npm install to build the artifact
 RUN cd nodeapi && npm install
