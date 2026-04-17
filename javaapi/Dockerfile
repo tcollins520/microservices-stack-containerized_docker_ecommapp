@@ -1,6 +1,6 @@
-# multi-stage java app
+# multi-stage java web app
 #stage 1 build artifact using Maven
-FROM openjdk:8 AS BUILD_IMAGE
+FROM maven:3.9-eclipse-temurin-8 AS build_image
 # set work dir inside of container
 WORKDIR /usr/src/app/
 # run apt update and install maven
@@ -11,13 +11,13 @@ COPY ./ /usr/src/app/
 RUN mvn install -DskipTests
 
 #stage 2 host Artifact
-FROM openjdk:8
+FROM eclipse-temurin:8-jre
 WORKDIR /usr/src/app/
 
-# copy build jar file from stage 1 from /usr/src/app/target/book-work-0.0.1-SNAPSHOT.jar to working directory with the name book-work-0.0.1.jar, so our artifact will be located in /usr/src/app/
-COPY --from=BUILD_IMAGE /usr/src/app/target/book-work-0.0.1-SNAPSHOT.jar ./book-work-0.0.1.jar
+# copy build jar file from stage 1 
+COPY --from=build_image /usr/src/app/target/book-work-0.0.1-SNAPSHOT.jar app.jar
 # expose container to port 9000
 EXPOSE 9000
 # run java jar in our container, jar file location
-ENTRYPOINT ["java","-jar","book-work-0.0.1.jar"]
+ENTRYPOINT ["java","-jar","app.jar"]
 # Test
