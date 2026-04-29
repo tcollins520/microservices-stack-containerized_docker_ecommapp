@@ -1,4 +1,4 @@
-# multi-stage java web app
+# multi-stage java web app dockerfile
 #stage 1 build java web app artifact using Maven
 FROM maven:3.9-eclipse-temurin-8 AS build_image
 # set work dir inside of container

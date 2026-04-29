@@ -1,4 +1,4 @@
-# multi-stage client app
+# multi-stage client dockerfile
 #stage 1, build the Artifact using Node.js
 FROM node:14 AS web-build
 # set working directory in the container to /usr/src/app

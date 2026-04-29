@@ -1,4 +1,4 @@
-# multi-stage nodejs app
+# multi-stage nodejs dockerfile
 #1 build nodejs artifact
 FROM node:14 AS nodeapi-build
 # set working directory inside of the container
