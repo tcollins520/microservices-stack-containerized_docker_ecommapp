@@ -15,7 +15,7 @@ AWS (ECR, ECS/EKS integration - optional)
 Client → Frontend → API Gateway → Microservices → Database
 
 Each service runs in its own container, allowing independent scaling and deployment.
-
+________________________________________
 📦 Microservices Included
 🛍️ Product Service – Manages product catalog
 🛒 Cart Service – Handles shopping cart logic
@@ -27,6 +27,7 @@ Each microservice is containerized using Docker
 Docker Compose orchestrates all services
 Services communicate via REST APIs
 Frontend interacts with backend services through APIs
+________________________________________
 🚀 Getting Started
 🔧 Prerequisites
 Docker installed
@@ -41,7 +42,7 @@ Service isolation
 Reproducible environments
 Easy local development setup
 🔄 CI/CD Integration (Optional Extension)
-
+________________________________________
 This project can be integrated with a CI/CD pipeline:
 
 Build Docker images via Jenkins
@@ -53,6 +54,7 @@ Containerization with Docker
 Service-to-service communication
 Scalable application design
 DevOps-ready deployment strategy
+________________________________________
 
 Microservices improve scalability and flexibility by allowing independent deployment and scaling of services. ()
 
@@ -63,6 +65,7 @@ Centralized logging (ELK stack)
 Monitoring (Prometheus + Grafana)
 API Gateway integration
 CI/CD pipeline automation
+
 👩🏽‍💻 Author
 
 Tina Collins
