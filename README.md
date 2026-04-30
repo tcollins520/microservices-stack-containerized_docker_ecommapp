@@ -11,6 +11,7 @@ Java / Spring Boot (Backend services)
 Node.js / Frontend (UI)
 REST APIs (Service communication)
 AWS (ECR, ECS/EKS integration - optional)
+________________________________________
 🏗️ Architecture Overview
 Client → Frontend → API Gateway → Microservices → Database
 
